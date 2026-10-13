@@ -1,10 +1,6 @@
 import { User } from "../models/User.js";
 import { clerkClient, getAuth } from "@clerk/express";
 
-const { getToken } = useAuth();
-
-const token = await getToken();
-console.log(token);
 export const getMe = async (req, res, next) => {
   try {
     const userId = req.userId;

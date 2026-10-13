@@ -4,12 +4,12 @@ import { Message } from "../models/Message.js";
 import { Chat } from "../models/Chat.js";
 import { User } from "../models/User.js";
 
-// store online users in memory: userId -> socketId
+
 export const onlineUsers = new Map();
 
 export const initializeSocket = (httpServer) => {
   const allowedOrigins = [
-    "http://localhost:5000", // Expo dev
+    "http://localhost:8081", // Expo dev
     "http://localhost:5173", // Vite web dev
   ].filter(Boolean);
 
